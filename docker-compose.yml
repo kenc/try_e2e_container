@@ -2,7 +2,7 @@ chrome_worker:
   build: ./try_e2e
   container_name: 'try_e2e'
   working_dir: '/go/src/local/go/try_e2e'
-  command: 'go run ./src/main.go'
+  command: sh -c "dep ensure && go run ./src/main.go"
   volumes:
     - ./:/go/src/local/go/try_e2e
   environment:
