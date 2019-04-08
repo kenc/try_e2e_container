@@ -2,5 +2,6 @@
 
 ## サンプル実行
 ```
+dep ensure
 docker-compose up
 ```
