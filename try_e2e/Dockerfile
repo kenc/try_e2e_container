@@ -6,7 +6,8 @@ From golang:1.12.1-alpine3.9
 RUN apk add --update \
             udev \
             ttf-freefont \
-            chromium
+            chromium \ 
+            git
 
 RUN mkdir /noto
 
@@ -26,3 +27,7 @@ RUN rm -rf /noto
 ## install chrome driver
 
 RUN apk add chromium-chromedriver 
+
+ ## install dep
+
+ RUN go get -u github.com/golang/dep/cmd/dep
